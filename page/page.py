@@ -1,6 +1,7 @@
 from page.home_page import HomePage
-from page.login_page import LoginPage
+
 from page.mine_page import MinePage
+from page.sign_up_and_login_page import SignUpAndLoginPage
 
 
 class Page:
@@ -8,8 +9,9 @@ class Page:
     def __init__(self, driver):
         self.driver = driver
 
-    # def login(self):
-    #     return LoginPage(self.driver)
+    @property
+    def sign_up_and_login(self):
+        return SignUpAndLoginPage(self.driver)
 
     @property
     def home(self):
