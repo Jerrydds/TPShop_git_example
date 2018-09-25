@@ -1,17 +1,11 @@
-# import allure
-# from selenium.webdriver.common.by import By
-
-class MinePage:
+from selenium.webdriver.common.by import By
+from base.base_action import BaseAction
 
 
-    def click_login_signup(self):
-        self.click_login_signup()
+class MinePage(BaseAction):
 
-    def click_setting(self):
-        self.click_setting()
+    sign_up_and_login_button = By.XPATH, "//*[@text='登录/注册']"
 
-    def is_login(self):
-        self.click_setting()
 
-    def click_address(self):
-        self.click_address()
+    def click_sign_up_and_login(self):
+        self.click(self.sign_up_and_login_button)
