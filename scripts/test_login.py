@@ -13,7 +13,6 @@ class TestLogin:
 
     @pytest.mark.parametrize("args", analyze_with_file_name("login", "test_login"))
     def test_login(self, args):
-    # def test_login(self):
         phone = args["phone"]
         password = args["password"]
         expect = args["expect"]
