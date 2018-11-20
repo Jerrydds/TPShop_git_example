@@ -21,13 +21,22 @@ class BaseAction:
     def click(self, feature):
         self.find_element(feature).click()
 
+    # 定位 toast元素,并返回文本内容
     def find_toast(self, key_word):
         feature = By.XPATH, "//*[contains(@text,'" + key_word + "')]"
         return self.find_element(feature, timeout=5, poll=0.1).text
 
+    # 定义查找 toast 的返回状态
     def is_toast_exits(self, key_word):
         try:
             self.find_toast(key_word)
             return True
         except Exception:
             return False
+        # 想知道toast 是否定位到,也可以这样写
+        # try:
+        #     feature = By.XPATH, "//*[contains(@text,'" + key_word + "')]"
+        #     self.find_element(feature, timeout=5, poll=0.1)
+        #     return True
+        # except Exception:
+        #     return False
