@@ -40,3 +40,13 @@ class BaseAction:
         #     return True
         # except Exception:
         #     return False
+
+    # 定义元素状态是否可用,某属性来决定
+    def is_feature_enabled(self, feature):
+
+        return self.find_element(feature).get_attribute("enabled") == "true"
+        # <==>
+        # if self.find_element(feature).get_attribute("enabled") == "true":
+        #     return True
+        # else:
+        #     return False
