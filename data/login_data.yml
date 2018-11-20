@@ -6,7 +6,7 @@ test_login:
   test_login_002:
     phone: "18503080305"
     password: "123456113"
-    expect: "登录错误"
+    expect: "密码错误"
   test_login_003:
     phone: "18503080305  "
     password: "123456"

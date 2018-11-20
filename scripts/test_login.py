@@ -11,6 +11,9 @@ class TestLogin:
         self.driver = init_driver()
         self.page = Page(self.driver)
 
+    def teardown(self):
+        self.driver.quit()
+
     @pytest.mark.parametrize("args", analyze_with_file_name("login", "test_login"))
     def test_login(self, args):
         phone = args["phone"]
