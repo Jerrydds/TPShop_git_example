@@ -2,7 +2,7 @@ from appium import webdriver
 
 def init_driver():
     # server 启动参数
-    desired_caps = {}
+    desired_caps = dict()
     # 设备信息
     desired_caps['platformName'] = 'Android'
     desired_caps['platformVersion'] = '5.1'
