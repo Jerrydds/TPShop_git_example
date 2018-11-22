@@ -46,7 +46,16 @@ class BaseAction:
 
         return self.find_element(feature).get_attribute("enabled") == "true"
         # <==>
+        # 定义查找 toast 的返回状态
         # if self.find_element(feature).get_attribute("enabled") == "true":
         #     return True
         # else:
         #     return False
+
+    # 定位 元素并返回状态
+    def is_feature_exist(self, feature):
+        try:
+            self.find_element(feature)
+            return True
+        except Exception:
+            return False
