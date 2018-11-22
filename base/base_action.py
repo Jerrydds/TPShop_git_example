@@ -59,3 +59,26 @@ class BaseAction:
             return True
         except Exception:
             return False
+
+    # -------- 以下仅仅是这个项目会用到
+
+    def is_login(self):
+        """
+        需要点击齿轮后进行验证(因为有动作,所以判断在前,判断不能直接写在返回里)
+        然后再返回 return
+        """
+        title_feature = By.ID, "com.tpshop.malls:id/titlebar_title_txtv"
+
+        # 判断登录状态,若导航标题为"登录",则表示未登录
+        return not self.find_element(title_feature).text == "登录"
+
+        # is_user_login = None
+        #
+        # if self.find_element(title_feature).text == "登录":
+        #     is_user_login = False
+        # else:
+        #     is_user_login = True
+        #
+        # self.driver.press_keycode(4)
+        #
+        # return is_user_login

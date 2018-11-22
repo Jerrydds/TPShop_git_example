@@ -97,3 +97,4 @@ class TestLogin:
         self.page.sign_up_and_login.click_show_password()
         # 如果找到输入的密码，那么断言为true
         assert self.page.sign_up_and_login.is_show_password_text_exist(password)
+
