@@ -11,9 +11,11 @@ def init_driver():
     # app的信息
     desired_caps['appPackage'] = 'com.tpshop.malls'
     desired_caps['appActivity'] = '.SPMainActivity'
-    # 解决输入中文
-    desired_caps['unicodeKeyboard'] = True
-    desired_caps['resetKeyboard'] = True
+    """
+    # # 解决输入中文  /* 加入Uiautomator2框架,输入中文问题也可以解决
+    # desired_caps['unicodeKeyboard'] = True
+    # desired_caps['resetKeyboard'] = True
+    """
     # toast
     desired_caps['automationName'] = 'Uiautomator2'
     # 声明我们的driver对象
