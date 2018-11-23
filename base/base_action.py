@@ -27,7 +27,7 @@ class BaseAction:
         return self.find_element(feature, timeout=5, poll=0.1).text
 
     # 定义查找 toast 的返回状态
-    def is_toast_exits(self, key_word):
+    def is_toast_exist(self, key_word):
         try:
             self.find_toast(key_word)
             return True

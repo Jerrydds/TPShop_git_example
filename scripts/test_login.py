@@ -48,12 +48,12 @@ class TestLogin:
     #     # 点击登录
     #     self.page.sign_up_and_login.click_login()
     #     # 判断toast是否存在
-    #     # if self.page.sign_up_and_login.is_toast_exits(expect):
+    #     # if self.page.sign_up_and_login.is_toast_exist(expect):
     #     #     return True
     #     # else:
     #     #     return False
     #     # <==>
-    #     assert self.page.sign_up_and_login.is_toast_exits(expect)
+    #     assert self.page.sign_up_and_login.is_toast_exist(expect)
 
     # # 只输入用户名或密码的脚本
     # @pytest.mark.parametrize("args", analyze_with_file_name("login", "test_login_miss_part"))
