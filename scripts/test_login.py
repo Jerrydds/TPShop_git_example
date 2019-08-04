@@ -86,7 +86,7 @@ class TestLogin:
         self.page.home.click_mine()
         # 我的点击登录
         self.page.mine.click_sign_up_and_login()
-        # 输入用户名  -- 以下 if 为判断所有元素text为password.text,所以不用例外定义元素去模拟输入和密码一样的内容
+        # 输入用户名  -- 以下 if 为判断所有元素text为password.text,所以不用另外定义元素去模拟输入和密码一样的内容
         # self.page.sign_up_and_login.input_phone("123")
         # 输入密码
         self.page.sign_up_and_login.input_password(password)
