@@ -46,7 +46,7 @@ class BaseAction:
 
         return self.find_element(feature).get_attribute("enabled") == "true"
         # <==>
-        # 查看 button 的返回状态
+        # 定义查找 toast 的返回状态
         # if self.find_element(feature).get_attribute("enabled") == "true":
         #     return True
         # else:
@@ -104,7 +104,7 @@ class BaseAction:
         page_source = ""
 
         while True:
-            if page_source == self.driver.page_source:
+            if self.driver.page_source == page_source:
                 return False
 
             try:

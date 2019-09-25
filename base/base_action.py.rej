@@ -1,0 +1,10 @@
+diff a/base/base_action.py b/base/base_action.py	(rejected hunks)
+@@ -46,7 +46,7 @@
+ 
+         return self.find_element(feature).get_attribute("enabled") == "true"
+         # <==>
+-        # 定义查找 toast 的返回状态
++        # 查看 button 的返回状态
+         # if self.find_element(feature).get_attribute("enabled") == "true":
+         #     return True
+         # else:
